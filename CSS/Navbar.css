@@ -1,0 +1,102 @@
+.fem__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem 1rem 3rem;
+}
+
+.fem__navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fem__navbar-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2em;
+}
+
+.fem__navbar-links li:first-child{ 
+    display: none;
+}
+
+.fem__navbar-links li a {
+    font-size: 16px;
+    font-family: var(--font);
+    color: var(--v-gray-blue);
+}
+
+.fem__navbar-links li a:hover , .fem__navbar-links li a.active {
+    color: var(--s-red);
+}
+
+.fem__navbar-smallscreen_menu-options{
+    display: none;
+}
+
+@media only screen and (max-width : 768px){
+    .fem__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 2.4rem 1rem 2.4rem;
+        position: relative;
+    }
+    
+    .fem__navbar-links {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -900px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 2rem;
+        row-gap: 2em;
+        height: 100vh;
+        background-color: var(--white);
+        width: 270px;
+        transition: right 0.4s linear;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    .fem__navbar-sm_right {
+        right: 0;
+        box-shadow: -1px 1px 12px var(--d-gray-blue);
+    }
+
+    
+    .fem__navbar-links li:first-child{ 
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 2rem 3rem 1rem 3rem;
+        cursor: pointer;
+    }
+
+    .fem__navbar-links li a {
+        font-size: 18px;
+        font-family: var(--font);
+        color: var(--v-gray-blue);
+    }
+
+    .fem__navbar-smallscreen_menu-options{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+
+    .fem__navbar {
+        padding: 1.2rem 1.2rem 0.4rem 1.2rem;
+    }
+    
+}
